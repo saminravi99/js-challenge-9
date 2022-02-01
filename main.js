@@ -353,11 +353,9 @@ console.log("The area of the triangle is " + areaOfTriangle(firstSide, secondSid
 // Find if the number is a prime number
 
 function isPrime(inputNumber) {
-    for (var i = 2; i < inputNumber; i++) {
         if (inputNumber % i == 0) {
             return 'Not a prime number';
-        }
-    }
+        }                       
     return 'Prime Number';
 }
 
