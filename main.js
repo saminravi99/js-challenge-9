@@ -350,17 +350,28 @@ let thirdSide = 17;
 console.log("The area of the triangle is " + areaOfTriangle(firstSide, secondSide, thirdSide) + " square units");
 
 
+
+
 // Find if the number is a prime number
 
-function isPrime(inputNumber) {
-        if (inputNumber % i == 0) {
+function isPrimeNumber(number) {
+    if (number == 1) {
             return 'Not a prime number';
-        }                       
-    return 'Prime Number';
+        }
+
+    for (var i = 2; i < number; i++) {
+        if (number % i == 0) {
+            return 'Not a prime number';
+        }
+    }
+    return 'Prime number';
+
 }
 
+
 let myNumber = 11;
-console.log("The number " + myNumber + " is " + isPrime(myNumber));
+console.log("The number " + myNumber + " is " + isPrimeNumber(myNumber));
+
 
 
 
@@ -421,3 +432,78 @@ console.log("The even numbers between 50 and 80 are " + evenNumbersArray(myArray
 console.log(evenNumbersArray(myArray21));
 
 
+// Reverse string
+
+function reverseString(inputString) {
+    var myString = "";
+    for (var i = inputString.length - 1; i >= 0; i--) {
+        myString = myString + inputString[i];
+    }
+    return myString;
+}
+
+let newString = "Hello World";
+console.log("The reverse of " + newString + " is " + reverseString(newString));
+
+
+
+
+
+// Count Words in a String
+
+
+function countWords(inputString) {
+    var myArray = inputString.split(" ");
+    return myArray.length;
+}
+
+
+let myString = "Hello World. Lorem2 ipsum dolor sit amet, consectetur adipiscing elit. Donec eget.";
+console.log("The number of words in " + myString + " is " + countWords(myString));
+
+
+// Find the longest word in a string
+
+
+function longestWord(inputString) {
+    var myArray = inputString.split(" ");
+    var longestWord = "";
+    for (var i = 0; i < myArray.length; i++) {
+        if (myArray[i].length > longestWord.length) {
+            longestWord = myArray[i];
+        }
+    }
+    return longestWord;
+}
+
+
+let myString2 = "Hello World. Lorem2 ipsum dolor sit amet, consectetur adipiscing elit. Donec eget.";
+console.log("The longest word in " + myString2 + " is " + longestWord(myString2));
+
+
+// Sort an array of numbers in ascending order
+
+
+function sortNumbers1(inputArray1) {
+    var myArray = inputArray1.sort(function (a, b) { return a - b });
+    return myArray;
+}
+
+
+let myArray22 = [23, 28, 30, 33, 53, 68, 90, 110, 130, 155, 200, 300, 400, 500, 600, 700, 800, 900, 1000];
+console.log("The sorted array of numbers in myArray22 in ascending order is " + sortNumbers2(myArray22));
+console.log(sortNumbers1(myArray22));
+
+
+// Sort an array of numbers in descending order
+
+
+function sortNumbers2(inputArray2) {
+    var myArray = inputArray2.sort(function (a, b) { return b - a });
+    return myArray;
+}
+
+
+let myArray23 = [23, 28, 30, 33, 53, 68, 90, 110, 130, 155, 200, 300, 400, 500, 600, 700, 800, 900, 1000];
+console.log("The sorted array of numbers in myArray23 descending order is " + sortNumbers2(myArray22));
+console.log(sortNumbers2(myArray23));

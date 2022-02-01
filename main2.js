@@ -1,12 +1,20 @@
 // Find if the number is a prime number
 
-function isPrime(inputNumber) {
-        if (inputNumber % i == 0) {
+function isPrimeNumber(number) {
+      if (number == 1) {
             return 'Not a prime number';
         }
-    
-    return 'Prime Number';
+
+    for (var i = 2; i < number; i++) {
+        if (number % i == 0) {
+            return 'Not a prime number';
+        }
+    }
+    return 'Prime number';
+
 }
 
-let myNumber = 11;
-console.log("The number " + myNumber + " is " + isPrime(myNumber));
+
+let myNumber = 17;
+console.log("The number " + myNumber + " is " + isPrimeNumber(myNumber));
+    
